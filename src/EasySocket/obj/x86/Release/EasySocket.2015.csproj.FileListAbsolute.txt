@@ -1,0 +1,5 @@
+D:\mc185104\projects\sscat\trunk\dist40\EasySocket.dll
+D:\mc185104\projects\sscat\trunk\dist40\EasySocket.pdb
+D:\mc185104\projects\sscat\trunk\src\EasySocket\obj\x86\Release\EasySocket.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\EasySocket\obj\x86\Release\EasySocket.dll
+D:\mc185104\projects\sscat\trunk\src\EasySocket\obj\x86\Release\EasySocket.pdb

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B69FB721-E630-4C3E-B448-27DED04BE984}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sscat</RootNamespace>
+    <AssemblyName>Sscat</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\sscat\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandBuilder.cs" />
+    <Compile Include="Commands\CommandFactory.cs" />
+    <Compile Include="Commands\ConsoleControllerFactory.cs" />
+    <Compile Include="Commands\HookLogs.cs" />
+    <Compile Include="Commands\ListFiles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SscatConsoleMain.cs" />
+    <Compile Include="Views\ConsoleAboutView.cs" />
+    <Compile Include="Views\ConsoleCleanFilesView.cs" />
+    <Compile Include="Views\ConsoleClientConfigurationView.cs" />
+    <Compile Include="Views\ConsoleCustomGeneratorView.cs" />
+    <Compile Include="Views\ConsoleHelp.cs" />
+    <Compile Include="Views\ConsoleMessageView.cs" />
+    <Compile Include="Views\ConsoleOutputView.cs" />
+    <Compile Include="Views\ConsolePlayerView.cs" />
+    <Compile Include="Views\ConsoleScriptGeneratorView.cs" />
+    <Compile Include="Views\ConsoleScriptListView.cs" />
+    <Compile Include="Views\ConsoleScriptView.cs" />
+    <Compile Include="Views\ConsoleServerView.cs" />
+    <Compile Include="Views\ConsoleWldbManagerView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientConfiguration.default.xml" />
+    <Content Include="LaneConfiguration.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2015.csproj">
+      <Project>{9894142b-9559-479a-8811-89ee3cde16fe}</Project>
+      <Name>Ncr.Core.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Core\Sscat.Core.2015.csproj">
+      <Project>{87288ecf-d0a9-4290-b053-3249d1713fd8}</Project>
+      <Name>Sscat.Core.2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

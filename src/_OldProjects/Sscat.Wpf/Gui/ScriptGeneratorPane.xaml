@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myTypes:BaseUserControl
+	x:Class="Sscat.Wpf.Gui.ScriptGeneratorPane" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:myTypes="clr-namespace:Sscat.Wpf.Gui">
+	<StackPanel>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Label
+				Grid.Row="0"
+				Grid.Column="0">Script Name</Label>
+			<TextBox
+				Grid.Row="0"
+				Grid.Column="1"
+				FontSize="20"
+				Margin="3"
+				Name="textBoxName"></TextBox>
+			<Label
+				Grid.Row="1"
+				Grid.Column="0">Script Description</Label>
+			<TextBox
+				Grid.Row="1"
+				Grid.Column="1"
+				FontSize="20"
+				Margin="3"
+				Name="textBoxDescription"></TextBox>
+			<Label
+				Grid.Row="2"
+				Grid.Column="0">Scripts Output Directory</Label>
+			<TextBox
+				Grid.Row="2"
+				Grid.Column="1"
+				FontSize="20"
+				Margin="3"
+				Name="textBoxOutputDirectory"></TextBox>
+			<Label
+				Grid.Row="3"
+				Grid.Column="0">Logs Directory</Label>
+			<TextBox
+				Grid.Row="3"
+				Grid.Column="1"
+				FontSize="20"
+				Margin="3"
+				Name="textBoxLogsDirectory"></TextBox>
+			<CheckBox
+				Grid.Row="4"
+				Grid.Column="1"
+				Margin="3"
+				Name="checkBoxSegmented">Segmented?</CheckBox>
+		</Grid>
+		<Button
+			Grid.Row="5"
+			Grid.Column="1"
+			HorizontalAlignment="Right"
+			Padding="10"
+			Click="ButtonGenerateScriptsClick">Generate Scripts</Button>
+	</StackPanel>
+</myTypes:BaseUserControl>

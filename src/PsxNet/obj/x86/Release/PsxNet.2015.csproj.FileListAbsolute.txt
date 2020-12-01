@@ -1,0 +1,5 @@
+D:\mc185104\projects\sscat\trunk\dist40\PsxNet.dll
+D:\mc185104\projects\sscat\trunk\dist40\PsxNet.pdb
+D:\mc185104\projects\sscat\trunk\src\PsxNet\obj\x86\Release\PsxNet.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\PsxNet\obj\x86\Release\PsxNet.dll
+D:\mc185104\projects\sscat\trunk\src\PsxNet\obj\x86\Release\PsxNet.pdb

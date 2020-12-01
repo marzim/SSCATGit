@@ -1,0 +1,109 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <IntegerProperty Name="MaxViolationCount">10000</IntegerProperty>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>api</Value>
+      <Value>aspx</Value>
+      <Value>attn</Value>
+      <Value>cadd</Value>
+      <Value>Configs</Value>
+      <Value>cpu</Value>
+      <Value>diag</Value>
+      <Value>diags</Value>
+      <Value>dll</Value>
+      <Value>dns</Value>
+      <Value>Fastlane</Value>
+      <Value>ini</Value>
+      <Value>junja</Value>
+      <Value>Leadthru</Value>
+      <Value>lp</Value>
+      <Value>mdi</Value>
+      <Value>Mis</Value>
+      <Value>ms</Value>
+      <Value>msdn</Value>
+      <Value>msr</Value>
+      <Value>multipick</Value>
+      <Value>Nav</Value>
+      <Value>ncr</Value>
+      <Value>ngui</Value>
+      <Value>nonconvert</Value>
+      <Value>notifier</Value>
+      <Value>param</Value>
+      <Value>parsable</Value>
+      <Value>Pos</Value>
+      <Value>psx</Value>
+      <Value>sco</Value>
+      <Value>sdi</Value>
+      <Value>sscat</Value>
+      <Value>ssco</Value>
+      <Value>symbologies</Value>
+      <Value>Symbology</Value>
+      <Value>ui</Value>
+      <Value>unav</Value>
+      <Value>unfocus</Value>
+      <Value>unfocuses</Value>
+      <Value>Upc</Value>
+      <Value>vk</Value>
+      <Value>Walmart</Value>
+      <Value>winuser</Value>
+      <Value>wldb</Value>
+      <Value>xaml</Value>
+      <Value>xm</Value>
+    </CollectionProperty>
+    <BooleanProperty Name="ViolationsAsErrors">True</BooleanProperty>
+  </GlobalSettings>
+  <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">
+      <Rules>
+        <Rule Name="FieldNamesMustNotUseHungarianNotation">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="FieldNamesMustNotContainUnderscore">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="FieldNamesMustBeginWithLowerCaseLetter">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="FieldNamesMustNotBeginWithUnderscore">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="PrefixLocalCallsWithThis">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="PrefixCallsCorrectly">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="ParameterMustNotSpanMultipleLines">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>

@@ -1,0 +1,5 @@
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Tools.CashDenomination.exe
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Tools.CashDenomination.pdb
+D:\mc185104\projects\sscat\trunk\src\SSCAT.Tools.CashDenomination\obj\x86\Release\Sscat.Tools.CashDenomination.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\SSCAT.Tools.CashDenomination\obj\x86\Release\Sscat.Tools.CashDenomination.exe
+D:\mc185104\projects\sscat\trunk\src\SSCAT.Tools.CashDenomination\obj\x86\Release\Sscat.Tools.CashDenomination.pdb

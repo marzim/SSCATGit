@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9894142B-9559-479A-8811-89EE3CDE16FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ncr.Core</RootNamespace>
+    <AssemblyName>Ncr.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\sscat\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
+    <DefineConstants>NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\thirdparty\external\log4net\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\thirdparty\external\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\thirdparty\external\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="Commands\AbstractCommand.cs" />
+    <Compile Include="Commands\CloseActiveWindow.cs" />
+    <Compile Include="Commands\CloseAllWindows.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\ICommandFactory.cs" />
+    <Compile Include="Controllers\AbstractController.cs" />
+    <Compile Include="Controllers\ControllerBuilder.cs" />
+    <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Controllers\IControllerFactory.cs" />
+    <Compile Include="Emulators\AbstractApplication.cs" />
+    <Compile Include="Emulators\ApplicationFactory.cs" />
+    <Compile Include="Emulators\BagScale.cs" />
+    <Compile Include="Emulators\BaseLaunchPadLauncher.cs" />
+    <Compile Include="Emulators\CashAcceptor.cs" />
+    <Compile Include="Emulators\CashTrough.cs" />
+    <Compile Include="Emulators\CoinAcceptor.cs" />
+    <Compile Include="Emulators\CoinChanger.cs" />
+    <Compile Include="Emulators\DefaultLaunchPadLauncher.cs" />
+    <Compile Include="Emulators\Emulator.cs" />
+    <Compile Include="Emulators\EmulatorEventArgs.cs" />
+    <Compile Include="Emulators\EmulatorException.cs" />
+    <Compile Include="Emulators\EmulatorItemNotFoundException.cs" />
+    <Compile Include="Emulators\EmulatorNotFoundException.cs" />
+    <Compile Include="Emulators\EmulatorTimeoutException.cs" />
+    <Compile Include="Emulators\ESAEmulator.cs" />
+    <Compile Include="Emulators\ESAInterventionWindow.cs" />
+    <Compile Include="Emulators\IApplication.cs" />
+    <Compile Include="Emulators\IBagScale.cs" />
+    <Compile Include="Emulators\ICashAcceptor.cs" />
+    <Compile Include="Emulators\ICashTrough.cs" />
+    <Compile Include="Emulators\ICoinAcceptor.cs" />
+    <Compile Include="Emulators\ICoinChanger.cs" />
+    <Compile Include="Emulators\IEmulator.cs" />
+    <Compile Include="Emulators\IEsaEmulator.cs" />
+    <Compile Include="Emulators\ILaunchPad.cs" />
+    <Compile Include="Emulators\ILaunchPadLauncher.cs" />
+    <Compile Include="Emulators\IMotionSensorCoupon.cs" />
+    <Compile Include="Emulators\IMsr.cs" />
+    <Compile Include="Emulators\IPCSignatureCapture.cs" />
+    <Compile Include="Emulators\IPinPad.cs" />
+    <Compile Include="Emulators\IPosPrinter.cs" />
+    <Compile Include="Emulators\IScale.cs" />
+    <Compile Include="Emulators\IScanner.cs" />
+    <Compile Include="Emulators\ITear.cs" />
+    <Compile Include="Emulators\Lane.cs" />
+    <Compile Include="Emulators\LaneException.cs" />
+    <Compile Include="Emulators\LaneWorker.cs" />
+    <Compile Include="Emulators\LaunchPad.cs" />
+    <Compile Include="Emulators\MotionSensorCoupon.cs" />
+    <Compile Include="Emulators\Msr.cs" />
+    <Compile Include="Emulators\NextGenUIAutoTest.cs" />
+    <Compile Include="Emulators\PCSignatureCapture.cs" />
+    <Compile Include="Emulators\PinPad.cs" />
+    <Compile Include="Emulators\POSPrinter.cs" />
+    <Compile Include="Emulators\ProfileManager.cs" />
+    <Compile Include="Emulators\Rap.cs" />
+    <Compile Include="Emulators\Scale.cs" />
+    <Compile Include="Emulators\Scanner.cs" />
+    <Compile Include="Emulators\SSBSimulator.cs" />
+    <Compile Include="Emulators\StoreServer.cs" />
+    <Compile Include="Emulators\TerminalInformation.cs" />
+    <Compile Include="Emulators\Upc.cs" />
+    <Compile Include="ExtensionMethods\IntExtensions.cs" />
+    <Compile Include="Gui\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\BaseForm.Designer.cs" />
+    <Compile Include="Gui\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\BaseUserControl.Designer.cs" />
+    <Compile Include="Gui\NStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\NToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\NToolStripLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\NToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\NToolStripSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\BaseSerializable.cs" />
+    <Compile Include="Models\ErrorMessage.cs" />
+    <Compile Include="Models\ErrorMessageCollection.cs" />
+    <Compile Include="Models\IBaseModel.cs" />
+    <Compile Include="Models\IBaseSerializable.cs" />
+    <Compile Include="Models\IPsx.cs" />
+    <Compile Include="Models\PsxCollection.cs" />
+    <Compile Include="Models\PsxWrapper.cs" />
+    <Compile Include="Models\PsxWrapperEventArgs.cs" />
+    <Compile Include="NcrEventArgs.cs" />
+    <Compile Include="Net\AbstractClientEngine.cs" />
+    <Compile Include="Net\AbstractServerEngine.cs" />
+    <Compile Include="Net\BaseClient.cs" />
+    <Compile Include="Net\BaseServer.cs" />
+    <Compile Include="Net\ClientDisconnectedException.cs" />
+    <Compile Include="Net\IClient.cs" />
+    <Compile Include="Net\IClientEngine.cs" />
+    <Compile Include="Net\IContent.cs" />
+    <Compile Include="Net\IRequestDispatcher.cs" />
+    <Compile Include="Net\IRequestParser.cs" />
+    <Compile Include="Net\IResponseDispatcher.cs" />
+    <Compile Include="Net\IResponseParser.cs" />
+    <Compile Include="Net\IServer.cs" />
+    <Compile Include="Net\IServerEngine.cs" />
+    <Compile Include="Net\MessageContent.cs" />
+    <Compile Include="Net\EasyClientEngine.cs" />
+    <Compile Include="Net\EasyServerEngine.cs" />
+    <Compile Include="Net\NetworkEventArgs.cs" />
+    <Compile Include="Net\Request.cs" />
+    <Compile Include="Net\RequestDispatcher.cs" />
+    <Compile Include="Net\Response.cs" />
+    <Compile Include="Net\ResponseDispatcher.cs" />
+    <Compile Include="Net\ResponseEventArgs.cs" />
+    <Compile Include="Net\XmlRequestParser.cs" />
+    <Compile Include="Net\XmlResponseParser.cs" />
+    <Compile Include="PInvoke\Gdi32.cs" />
+    <Compile Include="PInvoke\Kernel32.cs" />
+    <Compile Include="PInvoke\PROCESS_BASIC_INFORMATION.cs" />
+    <Compile Include="PInvoke\RECT.cs" />
+    <Compile Include="PInvoke\SYSTEMTIME.cs" />
+    <Compile Include="PInvoke\User32.cs" />
+    <Compile Include="Plugins\Plugin.cs" />
+    <Compile Include="Plugins\PluginControl.cs" />
+    <Compile Include="Plugins\PluginMainMenu.cs" />
+    <Compile Include="Plugins\PluginMenu.cs" />
+    <Compile Include="Plugins\PluginStatusBar.cs" />
+    <Compile Include="Plugins\PluginStatusBarLabel.cs" />
+    <Compile Include="Plugins\PluginToolBar.cs" />
+    <Compile Include="Plugins\PluginToolBarButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\AbstractApplicationManager.cs" />
+    <Compile Include="Util\AbstractLogger.cs" />
+    <Compile Include="Util\ApiHelper.cs" />
+    <Compile Include="Util\ApiManager.cs" />
+    <Compile Include="Util\Application7ZipNotFoundException.cs" />
+    <Compile Include="Util\ApplicationLauncher.cs" />
+    <Compile Include="Util\ApplicationManager.cs" />
+    <Compile Include="Util\ApplicationUtility.cs" />
+    <Compile Include="Util\BinarySerializer.cs" />
+    <Compile Include="Util\ConsoleMessageProvider.cs" />
+    <Compile Include="Util\ConvertUtility.cs" />
+    <Compile Include="Util\CryptographyHelper.cs" />
+    <Compile Include="Util\CryptographyManager.cs" />
+    <Compile Include="Util\CsvLogFormatter.cs" />
+    <Compile Include="Util\DateLogFormatter.cs" />
+    <Compile Include="Util\DateTimeUtility.cs" />
+    <Compile Include="Util\DirectoryHelper.cs" />
+    <Compile Include="Util\DirectoryManager.cs" />
+    <Compile Include="Util\DnsHelper.cs" />
+    <Compile Include="Util\DnsManager.cs" />
+    <Compile Include="Util\ExtendedStreamReader.cs" />
+    <Compile Include="Util\ExtendedStringReader.cs" />
+    <Compile Include="Util\FileEventArgs.cs" />
+    <Compile Include="Util\FileHelper.cs" />
+    <Compile Include="Util\FileManager.cs" />
+    <Compile Include="Util\FileWatcher.cs" />
+    <Compile Include="Util\IApiManager.cs" />
+    <Compile Include="Util\IApplicationLauncher.cs" />
+    <Compile Include="Util\IApplicationManager.cs" />
+    <Compile Include="Util\ICryptographyManager.cs" />
+    <Compile Include="Util\IDirectoryManager.cs" />
+    <Compile Include="Util\IDnsManager.cs" />
+    <Compile Include="Util\IExtendedTextReader.cs" />
+    <Compile Include="Util\IFileManager.cs" />
+    <Compile Include="Util\IImageManager.cs" />
+    <Compile Include="Util\IIniFileManager.cs" />
+    <Compile Include="Util\ILogFormatter.cs" />
+    <Compile Include="Util\ILogger.cs" />
+    <Compile Include="Util\ILogHook.cs" />
+    <Compile Include="Util\ImageHelper.cs" />
+    <Compile Include="Util\ImageManager.cs" />
+    <Compile Include="Util\IMessageProvider.cs" />
+    <Compile Include="Util\IniFileManager.cs" />
+    <Compile Include="Util\IniFileHelper.cs" />
+    <Compile Include="Util\IOHelper.cs" />
+    <Compile Include="Util\IProcessManager.cs" />
+    <Compile Include="Util\IRegistryManager.cs" />
+    <Compile Include="Util\ISecurityManager.cs" />
+    <Compile Include="Util\ISerializer.cs" />
+    <Compile Include="Util\ISSCOManager.cs" />
+    <Compile Include="Util\ITextWatcher.cs" />
+    <Compile Include="Util\IThreadManager.cs" />
+    <Compile Include="Util\IZipManager.cs" />
+    <Compile Include="Util\Log4NetLogger.cs" />
+    <Compile Include="Util\LoggingService.cs" />
+    <Compile Include="Util\LogHook.cs" />
+    <Compile Include="Util\LogHookEventArgs.cs" />
+    <Compile Include="Util\MessageBoxMessageProvider.cs" />
+    <Compile Include="Util\MessageService.cs" />
+    <Compile Include="Util\NativeMethods.cs" />
+    <Compile Include="Util\ProcessManager.cs" />
+    <Compile Include="Util\ProcessUtility.cs" />
+    <Compile Include="Util\RectangleHelper.cs" />
+    <Compile Include="Util\RegistryAddress.cs" />
+    <Compile Include="Util\RegistryHelper.cs" />
+    <Compile Include="Util\RegistryManager.cs" />
+    <Compile Include="Util\SecurityManager.cs" />
+    <Compile Include="Util\SecurityManagerException.cs" />
+    <Compile Include="Util\SimpleLogFormatter.cs" />
+    <Compile Include="Util\SSCOHelper.cs" />
+    <Compile Include="Util\SSCOManager.cs" />
+    <Compile Include="Util\StreamWriterLogger.cs" />
+    <Compile Include="Util\StringUtility.cs" />
+    <Compile Include="Util\TextWatcher.cs" />
+    <Compile Include="Util\ThreadHelper.cs" />
+    <Compile Include="Util\ThreadManager.cs" />
+    <Compile Include="Util\XmlHelper.cs" />
+    <Compile Include="Util\XmlSerializer.cs" />
+    <Compile Include="Util\ZipHelper.cs" />
+    <Compile Include="Util\ZipManager.cs" />
+    <Compile Include="Views\AbstractWorkbenchLayout.cs" />
+    <Compile Include="Views\BaseConsoleView.cs" />
+    <Compile Include="Views\ConsoleWorkbench.cs" />
+    <Compile Include="Views\ConsoleWorkbenchLayout.cs" />
+    <Compile Include="Views\DialogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DialogWorkbenchLayout.cs" />
+    <Compile Include="Views\WorkbenchLayout.cs" />
+    <Compile Include="Views\WorkbenchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\IView.cs" />
+    <Compile Include="Views\IViewFactory.cs" />
+    <Compile Include="Views\IWorkbench.cs" />
+    <Compile Include="Views\IWorkbenchLayout.cs" />
+    <Compile Include="Views\IWorkbenchWindow.cs" />
+    <Compile Include="Views\MdiWorkbenchLayout.cs" />
+    <Compile Include="Views\MdiWorkbenchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SdiWorkbenchLayout.cs" />
+    <Compile Include="Views\SdiWorkbenchWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\WorkbenchSettings.cs" />
+    <Compile Include="Views\WorkbenchSettingsEventArgs.cs" />
+    <Compile Include="Views\WorkbenchSingleton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\BaseForm.resx" />
+    <EmbeddedResource Include="Gui\BaseUserControl.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasySocket\EasySocket.2015.csproj">
+      <Project>{3dede62d-d687-4567-bbe1-0e7f204340ca}</Project>
+      <Name>EasySocket.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PsxNet\PsxNet.2015.csproj">
+      <Project>{5476850f-c521-41aa-83f5-7040d7e9a077}</Project>
+      <Name>PsxNet.2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

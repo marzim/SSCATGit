@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B27502FE-945E-4BCD-BE5B-519AFD4545CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ncr.Core.Tests</RootNamespace>
+    <AssemblyName>Ncr.Core.Tests</AssemblyName>
+    <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NMock2">
+      <HintPath>..\..\thirdparty\external\NMock\bin\NMock2.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\thirdparty\external\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\thirdparty\external\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CloseActiveWindowTests.cs" />
+    <Compile Include="Commands\CloseAllWindowsTests.cs" />
+    <Compile Include="Commands\CommandStub.cs" />
+    <Compile Include="Commands\ExitCommandTests.cs" />
+    <Compile Include="Controllers\AbstractControllerTests.cs" />
+    <Compile Include="Controllers\ControllerBuilderTests.cs" />
+    <Compile Include="Emulators\AbstractApplicationTests.cs" />
+    <Compile Include="Emulators\ApplicationFactoryTests.cs" />
+    <Compile Include="Emulators\ApplicationStub.cs" />
+    <Compile Include="Emulators\BagScaleTests.cs" />
+    <Compile Include="Emulators\BaseLaunchPadLauncherTests.cs" />
+    <Compile Include="Emulators\CashAcceptorTests.cs" />
+    <Compile Include="Emulators\CoinAcceptorTests.cs" />
+    <Compile Include="Emulators\CoinChangerTests.cs" />
+    <Compile Include="Emulators\DefaultLaunchPadLauncherTests.cs" />
+    <Compile Include="Emulators\EmulatorEventArgsTests.cs" />
+    <Compile Include="Emulators\EmulatorStub.cs" />
+    <Compile Include="Emulators\EmulatorTests.cs" />
+    <Compile Include="Emulators\LaneTests.cs" />
+    <Compile Include="Emulators\LaunchPadTests.cs" />
+    <Compile Include="Emulators\MotionSensorTests.cs" />
+    <Compile Include="Emulators\MsrTests.cs" />
+    <Compile Include="Emulators\PCSignatureCaptureTests.cs" />
+    <Compile Include="Emulators\PinPadTests.cs" />
+    <Compile Include="Emulators\PosPrinterTests.cs" />
+    <Compile Include="Emulators\ProfileManagerTests.cs" />
+    <Compile Include="Emulators\RapTests.cs" />
+    <Compile Include="Emulators\ScaleTests.cs" />
+    <Compile Include="Emulators\ScannerTests.cs" />
+    <Compile Include="Emulators\StoreServerTests.cs" />
+    <Compile Include="Emulators\TerminalInformationTests.cs" />
+    <Compile Include="Emulators\UpcTests.cs" />
+    <Compile Include="Gui\BaseFormTests.cs" />
+    <Compile Include="Gui\BaseUserControlTests.cs" />
+    <Compile Include="Gui\NStatusStripTests.cs" />
+    <Compile Include="Gui\NToolStripButtonTests.cs" />
+    <Compile Include="Gui\NToolStripLabelTests.cs" />
+    <Compile Include="Gui\NToolStripMenuItemTests.cs" />
+    <Compile Include="Gui\NToolStripSeparatorTests.cs" />
+    <Compile Include="Models\BaseModelTests.cs" />
+    <Compile Include="Models\BaseSerializableTests.cs" />
+    <Compile Include="Models\ErrorMessageCollectionTests.cs" />
+    <Compile Include="Models\ErrorMessageTests.cs" />
+    <Compile Include="Models\PsxCollectionTests.cs" />
+    <Compile Include="Models\PsxStub.cs" />
+    <Compile Include="Models\PsxWrapperEventArgsTests.cs" />
+    <Compile Include="Models\PsxWrapperTests.cs" />
+    <Compile Include="Net\ClientDisconnectedExceptionTests.cs" />
+    <Compile Include="Net\ClientStub.cs" />
+    <Compile Include="Net\ClientTests.cs" />
+    <Compile Include="Net\EasyClientEngineTests.cs" />
+    <Compile Include="Net\EasyServerEngineTests.cs" />
+    <Compile Include="Net\ServerStub.cs" />
+    <Compile Include="Net\HelloRequestDispatcher.cs" />
+    <Compile Include="Net\NcrSocketTests.cs" />
+    <Compile Include="Net\RequestDispatcherTests.cs" />
+    <Compile Include="Net\RequestTests.cs" />
+    <Compile Include="Net\ResponseDispatcherTests.cs" />
+    <Compile Include="Net\ResponseTests.cs" />
+    <Compile Include="Net\ServerTests.cs" />
+    <Compile Include="Net\TestResponseDispatcher.cs" />
+    <Compile Include="Plugins\PluginTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ApiHelperTests.cs" />
+    <Compile Include="Util\ApiManagerStub.cs" />
+    <Compile Include="Util\ApiManagerTests.cs" />
+    <Compile Include="Util\ApplicationLauncherTest.cs" />
+    <Compile Include="Util\ApplicationManagerStub.cs" />
+    <Compile Include="Util\ApplicationManagerTests.cs" />
+    <Compile Include="Util\ApplicationUtilityTests.cs" />
+    <Compile Include="Util\BinarySerializerTests.cs" />
+    <Compile Include="Util\ConvertUtilityTests.cs" />
+    <Compile Include="Util\CryptographyHelperTests.cs" />
+    <Compile Include="Util\CryptographyManagerTests.cs" />
+    <Compile Include="Util\CsvLogFormatterTests.cs" />
+    <Compile Include="Util\DateTimeUtilityTests.cs" />
+    <Compile Include="Util\DirectoryHelperTests.cs" />
+    <Compile Include="Util\DirectoryManagerStub.cs" />
+    <Compile Include="Util\DnsManagerStub.cs" />
+    <Compile Include="Util\DnsManagerTests.cs" />
+    <Compile Include="Util\DnsUtilityTests.cs" />
+    <Compile Include="Util\ExtendedStreamReaderTests.cs" />
+    <Compile Include="Util\ExtendedStringReaderTests.cs" />
+    <Compile Include="Util\FileEventArgsTests.cs" />
+    <Compile Include="Util\FileHandlerTests.cs" />
+    <Compile Include="Util\FileManagerStub.cs" />
+    <Compile Include="Util\FileManagerTests.cs" />
+    <Compile Include="Util\FileWatcherTests.cs" />
+    <Compile Include="Util\Form1.cs" />
+    <Compile Include="Util\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ImageHelperTests.cs" />
+    <Compile Include="Util\ImageManagerStub.cs" />
+    <Compile Include="Util\ImageManagerTests.cs" />
+    <Compile Include="Util\LogFormatterTests.cs" />
+    <Compile Include="Util\LoggingServiceTests.cs" />
+    <Compile Include="Util\LogHookTests.cs" />
+    <Compile Include="Util\MessageServiceTests.cs" />
+    <Compile Include="Util\ProcessManagerStub.cs" />
+    <Compile Include="Util\ProcessManagerTests.cs" />
+    <Compile Include="Util\ProcessUtilityTests.cs" />
+    <Compile Include="Util\RectangleHelperTests.cs" />
+    <Compile Include="Util\RegistryHelperTests.cs" />
+    <Compile Include="Util\RegistryManagerStub.cs" />
+    <Compile Include="Util\RegistryManagerTests.cs" />
+    <Compile Include="Util\SecurityManagerTests.cs" />
+    <Compile Include="Util\StreamWriterLoggerTests.cs" />
+    <Compile Include="Util\StringUtilityTests.cs" />
+    <Compile Include="Util\ThreadHelperTests.cs" />
+    <Compile Include="Util\ThreadManagerStub.cs" />
+    <Compile Include="Util\XmlHelperTests.cs" />
+    <Compile Include="Util\ZipHelperTests.cs" />
+    <Compile Include="Util\ZipManagerStub.cs" />
+    <Compile Include="Util\ZipManagerTests.cs" />
+    <Compile Include="Views\BaseConsoleViewTests.cs" />
+    <Compile Include="Views\ConsoleWorkbenchLayoutTests.cs" />
+    <Compile Include="Views\ConsoleWorkbenchTests.cs" />
+    <Compile Include="Views\DialogWindowTests.cs" />
+    <Compile Include="Views\DialogWorkbenchLayoutTests.cs" />
+    <Compile Include="Views\FingerWorkbenchLayoutTests.cs" />
+    <Compile Include="Views\FingerWorkbenchWindowTests.cs" />
+    <Compile Include="Views\Form1.cs" />
+    <Compile Include="Views\MdiWorkbenchLayoutTests.cs" />
+    <Compile Include="Views\SdiWorkbenchLayoutTests.cs" />
+    <Compile Include="Views\SdiWorkbenchWindowTests.cs" />
+    <Compile Include="Views\WorkbenchSettingsEventArgsTests.cs" />
+    <Compile Include="Views\WorkbenchSettingsTests.cs" />
+    <Compile Include="Views\WorkbenchSingletonTests.cs" />
+    <Compile Include="Views\WorkbenchStub.cs" />
+    <Compile Include="Views\WorkbenchTests.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Util\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Emulators" />
+    <Folder Include="Gui" />
+    <Folder Include="Models" />
+    <Folder Include="Net" />
+    <Folder Include="Commands" />
+    <Folder Include="Controllers" />
+    <Folder Include="Views" />
+    <Folder Include="Plugins" />
+    <Folder Include="Util" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasySocket\EasySocket.2010.csproj">
+      <Project>{2D57AE57-4A40-4BB1-8309-A8A007B66A76}</Project>
+      <Name>EasySocket.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2010.csproj">
+      <Project>{32A30B3E-6B71-48F2-8EE8-C742983BFB5E}</Project>
+      <Name>Ncr.Core.2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PsxNet\PsxNet.2010.csproj">
+      <Project>{08D4F714-A090-4597-A4CA-7BE7C043F0C9}</Project>
+      <Name>PsxNet.2010</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProfilingSessions\Session20120425_093046.sdps" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

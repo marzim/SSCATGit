@@ -1,0 +1,5 @@
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.exe.config
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.exe
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.pdb
+D:\mc185104\projects\sscat\trunk\src\Sscat\obj\x86\Release\Sscat.exe
+D:\mc185104\projects\sscat\trunk\src\Sscat\obj\x86\Release\Sscat.pdb

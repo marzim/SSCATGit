@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CBD7BE7-9CA1-4A65-BD30-55CCFD4A9AD3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sscat.Tests</RootNamespace>
+    <AssemblyName>Sscat.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\nunit.engine.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.engine.api">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\nunit.engine.api.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnit3.TestAdapter">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\NUnit3.TestAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ChuckNorrisRequestDispatcher.cs" />
+    <Compile Include="ChuckNorrisRequestDispatcherRunner.cs" />
+    <Compile Include="Commands\AbstractEventCommandTests.cs" />
+    <Compile Include="Commands\ApplicationLauncherCommandFactoryTests.cs" />
+    <Compile Include="Commands\CommandFactoryTests.cs" />
+    <Compile Include="Commands\CustomScriptGeneratorTests.cs" />
+    <Compile Include="Commands\DeviceEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Device\CaptureSignatureTests.cs" />
+    <Compile Include="Commands\Device\CheckAmountAndTaxDueTests.cs" />
+    <Compile Include="Commands\Device\CheckCashStatusTests.cs" />
+    <Compile Include="Commands\Device\CheckChangeDueAndTenderTypeTests.cs" />
+    <Compile Include="Commands\Device\CheckCMCashCountTests.cs" />
+    <Compile Include="Commands\Device\CheckCountPercentageTests.cs" />
+    <Compile Include="Commands\Device\CheckPrinterErrorTest.cs" />
+    <Compile Include="Commands\Device\CheckReceiptItemTests.cs" />
+    <Compile Include="Commands\Device\CheckSayAmountTests.cs" />
+    <Compile Include="Commands\Device\CheckSayPhraseTests.cs" />
+    <Compile Include="Commands\Device\CheckSaySecurityTests.cs" />
+    <Compile Include="Commands\Device\CheckTabReverseTests.cs" />
+    <Compile Include="Commands\Device\CheckTabTransportTests.cs" />
+    <Compile Include="Commands\Device\CheckTriColorLightTests.cs" />
+    <Compile Include="Commands\Device\DetectCouponTests.cs" />
+    <Compile Include="Commands\Device\EmulatorEventCommandTests.cs" />
+    <Compile Include="Commands\Device\EscrowCashTests.cs" />
+    <Compile Include="Commands\Device\ExecutePinPadTests.cs" />
+    <Compile Include="Commands\Device\InsertCoinTests.cs" />
+    <Compile Include="Commands\Device\InvokeCashAcceptorErrorTests.cs" />
+    <Compile Include="Commands\Device\InvokeCheckPrinterErrorTest.cs" />
+    <Compile Include="Commands\Device\InvokeCoinAcceptorErrorTests.cs" />
+    <Compile Include="Commands\Device\InvokeScannerErrorTests.cs" />
+    <Compile Include="Commands\Device\InvokeSignatureCaptureErrorTests.cs" />
+    <Compile Include="Commands\Device\ResetTABSmartScaleTests.cs" />
+    <Compile Include="Commands\Device\ScanCodeTests.cs" />
+    <Compile Include="Commands\Device\SwipeMsrTests.cs" />
+    <Compile Include="Commands\Device\WeighBagScaleTests.cs" />
+    <Compile Include="Commands\Device\WeighScaleTests.cs" />
+    <Compile Include="Commands\EventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Gui\ConnectToServerTests.cs" />
+    <Compile Include="Commands\Gui\DeleteScotLogsTests.cs" />
+    <Compile Include="Commands\Gui\EmulatorsOFFTests.cs" />
+    <Compile Include="Commands\Gui\EmulatorsONTests.cs" />
+    <Compile Include="Commands\Gui\GenerateDiagnosticsTests.cs" />
+    <Compile Include="Commands\Gui\GenerateScriptsTests.cs" />
+    <Compile Include="Commands\Gui\KillSscoTests.cs" />
+    <Compile Include="Commands\Gui\LaunchCaddConfigureTests.cs" />
+    <Compile Include="Commands\Gui\LaunchRapTests.cs" />
+    <Compile Include="Commands\Gui\LaunchSscoTests.cs" />
+    <Compile Include="Commands\Gui\PlayScriptsTests.cs" />
+    <Compile Include="Commands\Gui\RevertSettingsTests.cs" />
+    <Compile Include="Commands\Gui\RunClientTests.cs" />
+    <Compile Include="Commands\Gui\RunServerTests.cs" />
+    <Compile Include="Commands\Gui\ShowAboutTests.cs" />
+    <Compile Include="Commands\Gui\ShowCardEventEditorTests.cs" />
+    <Compile Include="Commands\Gui\ShowFLDeviceTests.cs" />
+    <Compile Include="Commands\Gui\ShowHelpTests.cs" />
+    <Compile Include="Commands\Gui\ShowScriptsTests.cs" />
+    <Compile Include="Commands\Gui\ShowSscoVersionTests.cs" />
+    <Compile Include="Commands\Gui\ToggleEmulatorsTests.cs" />
+    <Compile Include="Commands\HookLogsTests.cs" />
+    <Compile Include="Commands\Launcher\LaunchApplicationTests.cs" />
+    <Compile Include="Commands\LaunchpadPsxEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\ListFilesTests.cs" />
+    <Compile Include="Commands\ManageApplicationLauncherTests.cs" />
+    <Compile Include="Commands\PsxEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Psx\LaunchPadPsxChangeContextTests.cs" />
+    <Compile Include="Commands\Psx\LaunchPadPsxChangeFocusTests.cs" />
+    <Compile Include="Commands\Psx\LaunchPadPsxClickTests.cs" />
+    <Compile Include="Commands\Psx\PsxChangeContextTests.cs" />
+    <Compile Include="Commands\Psx\PsxClickTests.cs" />
+    <Compile Include="Commands\Psx\PsxConnectRemoteTests.cs" />
+    <Compile Include="Commands\Psx\PsxKeyDownTests.cs" />
+    <Compile Include="Commands\Psx\PsxKeyPressTests.cs" />
+    <Compile Include="Commands\ReportEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Report\CheckReportsMenuTests.cs" />
+    <Compile Include="Commands\Report\CheckRunReportsTests.cs" />
+    <Compile Include="Commands\UpdateWLDBCommandTests.cs" />
+    <Compile Include="Commands\UpdateWLDBScriptCommandTests.cs" />
+    <Compile Include="Commands\WldbEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Wldb\UpdateWldbTests.cs" />
+    <Compile Include="Commands\XmEventCommandFactoryTests.cs" />
+    <Compile Include="Commands\Xm\CheckXmCountChangesTests.cs" />
+    <Compile Include="Commands\Xm\CheckXmPrintDataTests.cs" />
+    <Compile Include="Config\ClientConfigurationEventArgsTests.cs" />
+    <Compile Include="Config\ClientConfigurationTests.cs" />
+    <Compile Include="Config\ConfigFileEventArgsTests.cs" />
+    <Compile Include="Config\ConfigFilesTests.cs" />
+    <Compile Include="Config\ConfigFileTests.cs" />
+    <Compile Include="Config\LaneConfigurationTests.cs" />
+    <Compile Include="Config\LaunchPadConfigTest.cs" />
+    <Compile Include="Config\MSRCardConfigurationTests.cs" />
+    <Compile Include="Config\MSRCardsTest.cs" />
+    <Compile Include="Config\MSRCardTest.cs" />
+    <Compile Include="Config\PlayerConfigurationTests.cs" />
+    <Compile Include="Config\ScriptConfigsTests.cs" />
+    <Compile Include="Config\ScriptGeneratorConfigurationTests.cs" />
+    <Compile Include="Controllers\ApplicationLauncherControllerTests.cs" />
+    <Compile Include="Controllers\ClientControllerTests.cs" />
+    <Compile Include="Controllers\ControllerFactoryTests.cs" />
+    <Compile Include="Controllers\LaneControllerTests.cs" />
+    <Compile Include="Controllers\ServerControllerTests.cs" />
+    <Compile Include="Controllers\WldbControllerTests.cs" />
+    <Compile Include="Emulators\SscatLaneTests.cs" />
+    <Compile Include="Emulators\SscatLaunchPadTest.cs" />
+    <Compile Include="Finger\FingerApplicationLauncherEventTests.cs" />
+    <Compile Include="Finger\FingerDeviceEventErrorTests.cs" />
+    <Compile Include="Finger\FingerDeviceEventTests.cs" />
+    <Compile Include="Finger\FingerLaunchPadPsxEventTests.cs" />
+    <Compile Include="Finger\FingerPsxEventTests.cs" />
+    <Compile Include="Finger\FingerReportScriptsTests.cs" />
+    <Compile Include="Finger\FingerReportScriptTests.cs" />
+    <Compile Include="Finger\FingerReportTests.cs" />
+    <Compile Include="Finger\FingerScriptEventTests.cs" />
+    <Compile Include="Finger\FingerScriptsTests.cs" />
+    <Compile Include="Finger\FingerScriptTests.cs" />
+    <Compile Include="Finger\FingerWldbEventTests.cs" />
+    <Compile Include="Finger\FingerXmEventTests.cs" />
+    <Compile Include="GodRequestDispatcher.cs" />
+    <Compile Include="GodRequestDispatcherRunner.cs" />
+    <Compile Include="Gui\AboutFormTests.cs" />
+    <Compile Include="Gui\ApplicationLauncherPaneTests.cs" />
+    <Compile Include="Gui\BaseFormTests.cs" />
+    <Compile Include="Gui\BaseUserControlTests.cs" />
+    <Compile Include="Gui\CardEventEditorTests.cs" />
+    <Compile Include="Gui\CardEventListViewItemTests.cs" />
+    <Compile Include="Gui\CardEventListViewTests.cs" />
+    <Compile Include="Gui\CardFormTests.cs" />
+    <Compile Include="Gui\ClientConfigurationPaneTests.cs" />
+    <Compile Include="Gui\ClientPaneTests.cs" />
+    <Compile Include="Gui\ConfigFileFormTests.cs" />
+    <Compile Include="Gui\ConfigFileListViewItemTests.cs" />
+    <Compile Include="Gui\ConnectToServerFormTests.cs" />
+    <Compile Include="Gui\CustomGeneratorPaneTests.cs" />
+    <Compile Include="Gui\DiagsStatusFormTests.cs" />
+    <Compile Include="Gui\LoadingFormTests.cs" />
+    <Compile Include="Gui\LoadingFormThreadTests.cs" />
+    <Compile Include="Gui\MainFormTests.cs" />
+    <Compile Include="Gui\MessageFormTests.cs" />
+    <Compile Include="Gui\MSCardSelectionFormTests.cs" />
+    <Compile Include="Gui\MSRCardFormTests.cs" />
+    <Compile Include="Gui\OptionsFormTests.cs" />
+    <Compile Include="Gui\OutputPaneTests.cs" />
+    <Compile Include="Gui\PlayerPaneTests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PlaylistTreeNodeTests.cs" />
+    <Compile Include="Gui\ReportPaneTests.cs" />
+    <Compile Include="Gui\SaveReportFormTests.cs" />
+    <Compile Include="Gui\ScriptCardEventListViewTests.cs" />
+    <Compile Include="Gui\ScriptCardEventListVitewItemTests.cs" />
+    <Compile Include="Gui\ScriptEventListViewItemTests.cs" />
+    <Compile Include="Gui\ScriptEventListViewTests.cs" />
+    <Compile Include="Gui\ScriptGeneratorPaneTests.cs" />
+    <Compile Include="Gui\ScriptPaneTests.cs" />
+    <Compile Include="Gui\ScriptResultListViewItemTests.cs" />
+    <Compile Include="Gui\ScriptResultListViewTests.cs" />
+    <Compile Include="Gui\ScriptTreeNodeTests.cs" />
+    <Compile Include="Gui\ServerFormTests.cs" />
+    <Compile Include="Gui\UpdateWLDBScriptPaneTests.cs" />
+    <Compile Include="Gui\WebBrowserPaneTests.cs" />
+    <Compile Include="Gui\WldbManagerPaneTests.cs" />
+    <Compile Include="Log\HookerTests.cs" />
+    <Compile Include="Log\ScotLogHookEventArgsTests.cs" />
+    <Compile Include="Log\ScotLogHookTests.cs" />
+    <Compile Include="Models\AbstractScriptTests.cs" />
+    <Compile Include="Models\ApplicationLauncherEventTests.cs" />
+    <Compile Include="Models\DeviceEventTests.cs" />
+    <Compile Include="Models\LaunchPadPsxEventTests.cs" />
+    <Compile Include="Models\LogTests.cs" />
+    <Compile Include="Models\MemoryUsageTests.cs" />
+    <Compile Include="Models\PlaybackTests.cs" />
+    <Compile Include="Models\PlaylistEventArgsTests.cs" />
+    <Compile Include="Models\PlaylistScriptEventArgsTests.cs" />
+    <Compile Include="Models\PlaylistScriptTests.cs" />
+    <Compile Include="Models\PlaylistTests.cs" />
+    <Compile Include="Models\PsxDisplayTests.cs" />
+    <Compile Include="Models\PsxEventTests.cs" />
+    <Compile Include="Models\ReportEventArgsTests.cs" />
+    <Compile Include="Models\ReportPlaybackTests.cs" />
+    <Compile Include="Models\ReportPlaybackUtilityTests.cs" />
+    <Compile Include="Models\ReportRepositoryStub.cs" />
+    <Compile Include="Models\ReportScriptEventTests.cs" />
+    <Compile Include="Models\ResultTests.cs" />
+    <Compile Include="Models\ScriptConfigTests.cs" />
+    <Compile Include="Models\ScriptEventFormatterTests.cs" />
+    <Compile Include="Models\ScriptEventTests.cs" />
+    <Compile Include="Models\ScriptFileTests.cs" />
+    <Compile Include="Models\ScriptTests.cs" />
+    <Compile Include="Models\SscatLaneEventArgsTests.cs" />
+    <Compile Include="Models\TriColorLightFactoryTests.cs" />
+    <Compile Include="Models\WldbEventTests.cs" />
+    <Compile Include="Models\XmEventTests.cs" />
+    <Compile Include="Net\CheckConfigRequestDispatcherTests.cs" />
+    <Compile Include="Net\ConfigCheckedResponseDispatcherTests.cs" />
+    <Compile Include="Net\ConfigLoadedResponseDispatcherTests.cs" />
+    <Compile Include="Net\ConfigResponseDispatcherTests.cs" />
+    <Compile Include="Net\ErrorResponseDispatcherTests.cs" />
+    <Compile Include="Net\GenerateScriptsRequestDispatcherTests.cs" />
+    <Compile Include="Net\GetConfigRequestDispatcherTests.cs" />
+    <Compile Include="Net\LoadConfigRequestDispatcherTests.cs" />
+    <Compile Include="Net\MessageResponseDispatcherTests.cs" />
+    <Compile Include="Net\PlaybackResponseDispatcherTests.cs" />
+    <Compile Include="Net\PlayerStoppedResponseDispatcherTests.cs" />
+    <Compile Include="Net\PlayScriptRequestDispatcherTests.cs" />
+    <Compile Include="Net\RequestParserTests.cs" />
+    <Compile Include="Net\ScriptEventResponseDispatcherTests.cs" />
+    <Compile Include="Net\ScriptResultResponseDispatcherTests.cs" />
+    <Compile Include="Net\ScriptsResponseDispatcherTests.cs" />
+    <Compile Include="Net\SscatClientTests.cs" />
+    <Compile Include="Net\SscatClientTests2.cs" />
+    <Compile Include="Net\SscatClientWorkerTests.cs" />
+    <Compile Include="Net\SscatRequestTests.cs" />
+    <Compile Include="Net\SscatResponseTests.cs" />
+    <Compile Include="Net\SscatServerTests.cs" />
+    <Compile Include="Net\SscatServerWokerTests.cs" />
+    <Compile Include="Net\StopPlayerRequestDispatcherTests.cs" />
+    <Compile Include="Net\StopResponseDispatcherTests.cs" />
+    <Compile Include="Net\UpdateWldbRequestDispatcherTests.cs" />
+    <Compile Include="Parsers\EventParserTests.cs" />
+    <Compile Include="Parsers\LaunchPadPsxParserTests.cs" />
+    <Compile Include="Parsers\MemoryUsageParserTests.cs" />
+    <Compile Include="Parsers\ParserPatternTests.cs" />
+    <Compile Include="Parsers\ProgressEventArgsTests.cs" />
+    <Compile Include="Parsers\PsxDynamicFileNameTests.cs" />
+    <Compile Include="Parsers\PsxParserTests.cs" />
+    <Compile Include="Parsers\SMParserTests.cs" />
+    <Compile Include="Parsers\TraceParserTests.cs" />
+    <Compile Include="Parsers\XmodeParserTests.cs" />
+    <Compile Include="PsxNet\PsxDisplayTests.cs" />
+    <Compile Include="PsxNet\PsxTests.cs" />
+    <Compile Include="Repositories\ClientConfigurationRepositoryTests.cs" />
+    <Compile Include="Repositories\ConfigFileRepositoryTests.cs" />
+    <Compile Include="Repositories\ConfigFilesRepositoryTests.cs" />
+    <Compile Include="Repositories\GeneratorConfigurationRepositoryStub.cs" />
+    <Compile Include="Repositories\LaneConfigurationRepositoryStub.cs" />
+    <Compile Include="Repositories\PlayerConfigurationRepositoryStub.cs" />
+    <Compile Include="Repositories\PsxDisplayRepositoryStub.cs" />
+    <Compile Include="Repositories\ScriptRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlFingerScriptRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlLaneConfigurationRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlPlayerConfigurationRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlPluginRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlPsxDisplayRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlReportRepositoryTests.cs" />
+    <Compile Include="Repositories\XmlScriptGeneratorConfigurationRepositoryTests.cs" />
+    <Compile Include="Services\ClientServiceTests.cs" />
+    <Compile Include="Services\LaneServiceTests.cs" />
+    <Compile Include="Util\ApplicationLauncherStub.cs" />
+    <Compile Include="Util\ArgumentParserTests.cs" />
+    <Compile Include="Util\ArrayHelperTests.cs" />
+    <Compile Include="Util\CpuAndMemoryLoggerTests.cs" />
+    <Compile Include="Util\DirectoryEventArgsTests.cs" />
+    <Compile Include="Util\EncodingUtilityTests.cs" />
+    <Compile Include="Util\FileComparerTests.cs" />
+    <Compile Include="Util\FileNameComparerTests.cs" />
+    <Compile Include="Util\GenerateDiagsTest.cs" />
+    <Compile Include="Util\RegexUtilityTests.cs" />
+    <Compile Include="Util\ResourceUtilityTests.cs" />
+    <Compile Include="Util\ScriptComparerTests.cs" />
+    <Compile Include="Util\ScriptEventComparerTests.cs" />
+    <Compile Include="Util\SecurityManagerStub.cs" />
+    <Compile Include="Util\SecurityManagerTests.cs" />
+    <Compile Include="Util\SscatSecurityManagerTests.cs" />
+    <Compile Include="Util\StringLogicalComparerTests.cs" />
+    <Compile Include="Util\WindowAppHelperTest.cs" />
+    <Compile Include="Util\WindowAppManagerStub.cs" />
+    <Compile Include="Views\ConsoleAboutViewTests.cs" />
+    <Compile Include="Views\ConsoleCleanFilesViewTests.cs" />
+    <Compile Include="Views\ConsoleClientConfigurationViewTests.cs" />
+    <Compile Include="Views\ConsoleHelpTests.cs" />
+    <Compile Include="Views\ConsoleOutputViewTests.cs" />
+    <Compile Include="Views\ConsolePlayerViewTests.cs" />
+    <Compile Include="Views\ConsoleScriptGeneratorViewTests.cs" />
+    <Compile Include="Views\ConsoleScriptViewTests.cs" />
+    <Compile Include="Views\ConsoleServerViewTests.cs" />
+    <Compile Include="Views\ConsoleWldbManagerViewTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ncr.Core.Tests\Ncr.Core.Tests.2013.csproj">
+      <Project>{b2d36f96-c9e8-4ece-88fc-797021bdd194}</Project>
+      <Name>Ncr.Core.Tests.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2013.csproj">
+      <Project>{9894142b-9559-479a-8811-89ee3cde16fe}</Project>
+      <Name>Ncr.Core.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PsxNet\PsxNet.2013.csproj">
+      <Project>{5476850f-c521-41aa-83f5-7040d7e9a077}</Project>
+      <Name>PsxNet.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Core\Sscat.Core.2013.csproj">
+      <Project>{87288ecf-d0a9-4290-b053-3249d1713fd8}</Project>
+      <Name>Sscat.Core.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Server\Sscat.Server.2013.csproj">
+      <Project>{b5a70aa7-7ce7-4668-b3b7-6a4f621321c1}</Project>
+      <Name>Sscat.Server.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Winforms\Sscat.Winforms.2013.csproj">
+      <Project>{ae809a55-8771-4eec-b72b-61513be58347}</Project>
+      <Name>Sscat.Winforms.2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat\Sscat.2013.csproj">
+      <Project>{b69fb721-e630-4c3e-b448-27ded04be984}</Project>
+      <Name>Sscat.2013</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

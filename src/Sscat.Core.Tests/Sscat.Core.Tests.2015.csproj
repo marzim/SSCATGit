@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D19259EF-397F-414F-8A43-15BAC8A4E886}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sscat.Core.Tests</RootNamespace>
+    <AssemblyName>Sscat.Core.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\..\thirdparty\external\Moq\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestButtonClickTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestCartIndexChangedTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestCategoryClickTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestContextChangedTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestEndOfTransactionTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestGridPageClickTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestHWuNavTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestKeyboardButtonClickTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestListButtonClickTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestSignSignatureTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestSwipeLeftTest.cs" />
+    <Compile Include="Commands_Tests\Events_Tests\UIAutoTest_Tests\UIAutoTestSwipeRightTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands_Tests\Events_Tests\Device_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\Launcher_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\LaunchPadPsx_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\Psx_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\Report_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\UIAutoPOSEmulator_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\Wldb_Tests\" />
+    <Folder Include="Commands_Tests\Events_Tests\Xm_Tests\" />
+    <Folder Include="Commands_Tests\Gui_Tests\" />
+    <Folder Include="Config_Tests\" />
+    <Folder Include="Controllers_Tests\" />
+    <Folder Include="Emulators_Tests\" />
+    <Folder Include="Finger_Tests\" />
+    <Folder Include="Gui_Tests\" />
+    <Folder Include="Log_Tests\" />
+    <Folder Include="Models_Tests\" />
+    <Folder Include="Net_Tests\Dispatchers\" />
+    <Folder Include="Parsers_Tests\DeviceEvents\" />
+    <Folder Include="Parsers_Tests\PSXEvents\" />
+    <Folder Include="Parsers_Tests\ReportEvents\" />
+    <Folder Include="Parsers_Tests\UIAutoPosEmulatorEvents\" />
+    <Folder Include="Parsers_Tests\UIAutoTestEvents\" />
+    <Folder Include="Parsers_Tests\XMEvents\" />
+    <Folder Include="Repositories_Tests\IO\" />
+    <Folder Include="Repositories_Tests\Xml\" />
+    <Folder Include="Services_Tests\" />
+    <Folder Include="Util_Tests\Comparers\" />
+    <Folder Include="Views_Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2015.csproj">
+      <Project>{9894142b-9559-479a-8811-89ee3cde16fe}</Project>
+      <Name>Ncr.Core.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Core\Sscat.Core.2015.csproj">
+      <Project>{87288ecf-d0a9-4290-b053-3249d1713fd8}</Project>
+      <Name>Sscat.Core.2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

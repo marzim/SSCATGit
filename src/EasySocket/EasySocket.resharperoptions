@@ -1,0 +1,71 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:JadBenAutho.EasySocket.ClientInfo">
+      <Item value="IsLegal" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JadBenAutho.EasySocket.EasyServer">
+      <Item value="SendDataAsync" priority="1" />
+      <Item value="Dispose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms">
+      <Item value="MessageBox" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread.CurrentThread">
+      <Item value="Abort" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.Socket">
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.ThreadState">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JadBenAutho.EasySocket.ServerInfo">
+      <Item value="IsLegal" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="ThreadState" priority="7" />
+      <Item value="Resume" priority="2" />
+      <Item value="Abort" priority="0" />
+      <Item value="Suspend" priority="1" />
+      <Item value="Interrupt" priority="1" />
+      <Item value="Priority" priority="7" />
+      <Item value="Name" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading">
+      <Item value="ThreadStateException" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JadBenAutho.EasySocket.EasyClient">
+      <Item value="Dispose" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows">
+      <Item value="Forms" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:JadBenAutho.EasySocket.SocketsList">
+      <Item value="Dispose" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.TcpListener">
+      <Item value="Stop" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="C:\Documents and Settings\Administrator\Desktop\C# My EasySocket\EasySocket v7\EasySocket\EasyServer.cs" offset="32118" line="0" column="0" />
+      <TrackedFile location="C:\Documents and Settings\Administrator\Desktop\C# My EasySocket\EasySocket v7\EasySocket\EasyClient.cs" offset="230" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+</Configuration>

@@ -1,0 +1,11 @@
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Core.dll
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Core.pdb
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.Gui.AboutForm.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.Gui.CardEventEditor.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.Gui.CardForm.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.Gui.LoadingForm.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.Gui.MessageForm.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.2015.csproj.GenerateResource.Cache
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.dll
+D:\mc185104\projects\sscat\trunk\src\Sscat.Core\obj\x86\Release\Sscat.Core.pdb

@@ -1,0 +1,8 @@
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Server.exe.config
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Server.exe
+D:\mc185104\projects\sscat\trunk\dist40\Sscat.Server.pdb
+D:\mc185104\projects\sscat\trunk\src\Sscat.Server\obj\x86\Release\Sscat.Server.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\Sscat.Server\obj\x86\Release\Sscat.Server.Gui.ServerForm.resources
+D:\mc185104\projects\sscat\trunk\src\Sscat.Server\obj\x86\Release\Sscat.Server.2015.csproj.GenerateResource.Cache
+D:\mc185104\projects\sscat\trunk\src\Sscat.Server\obj\x86\Release\Sscat.Server.exe
+D:\mc185104\projects\sscat\trunk\src\Sscat.Server\obj\x86\Release\Sscat.Server.pdb

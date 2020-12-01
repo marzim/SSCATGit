@@ -1,0 +1,48 @@
+<project SchemaVersion="1.3">
+    <assemblies>
+        <assembly location=".\bin\Release\EasySocket.dll" documentation=".\EasySocket.xml" />
+    </assemblies>
+    <namespaces>
+        <namespace name="JadBenAutho.EasySocket">This namespace contains major classes, the EasyServer and The EasyClient that ment to make the implementation of client-server architecture creation, alot more easy and fast. Although they are designd to have almost everything build in ans simple to use as possible, they are sill highly flexible and stable. This two classes was developed at the same time but can still work with other Client\Server applications.</namespace>
+        <namespace name="JadBenAutho.EasySocket.Tools">Contains a small set of tools to control the priority of the EasyClient and the EasyServer process. </namespace>
+    </namespaces>
+    <documenters>
+        <documenter name="JavaDoc">
+            <property name="OutputDirectory" value=".\doc\" />
+        </documenter>
+        <documenter name="LaTeX">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="TextFileFullName" value="Documentation.tex" />
+            <property name="TexFileBaseName" value="Documentation" />
+            <property name="LatexCompiler" value="latex" />
+            <property name="TexFileFullPath" value=".\doc\Documentation.tex" />
+        </documenter>
+        <documenter name="LinearHtml">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="Title" value="An NDoc Documented Class Library" />
+        </documenter>
+        <documenter name="MSDN">
+            <property name="OutputDirectory" value="C:\Documents and Settings\Israel\שולחן העבודה\Easy Socket documentation\" />
+            <property name="HtmlHelpName" value="Documentation" />
+            <property name="Title" value="Israel Ors' Easy Socket Documentation " />
+            <property name="DocumentInternals" value="True" />
+            <property name="DocumentSealedProtected" value="True" />
+            <property name="DocumentPrivates" value="True" />
+            <property name="CopyrightText" value="This is free licence FreeWare that created by Israel Or September 2005" />
+            <property name="DocumentAttributes" value="True" />
+            <property name="ShowTypeIdInAttributes" value="True" />
+        </documenter>
+        <documenter name="MSDN 2003">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="Title" value="An NDoc Documented Class Library" />
+        </documenter>
+        <documenter name="VS.NET 2003">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="HtmlHelpName" value="Documentation" />
+            <property name="Title" value="An NDoc documented library" />
+        </documenter>
+        <documenter name="XML">
+            <property name="OutputFile" value=".\doc\doc.xml" />
+        </documenter>
+    </documenters>
+</project>

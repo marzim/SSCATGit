@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87288ECF-D0A9-4290-B053-3249D1713FD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sscat.Core</RootNamespace>
+    <AssemblyName>Sscat.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\sscat\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
+    <DefineConstants>NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\thirdparty\external\MySql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\thirdparty\external\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TestAutomationCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\ncr\TestAutomationCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="UILogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\ncr\UILogger.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Events\AbstractEventCommand.cs" />
+    <Compile Include="Commands\Events\ApplicationLauncherCommandFactory.cs" />
+    <Compile Include="Commands\Events\DeviceEventCommand.cs" />
+    <Compile Include="Commands\Events\DeviceEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Device\CaptureSignature.cs" />
+    <Compile Include="Commands\Events\Device\CheckAmountAndTaxDue.cs" />
+    <Compile Include="Commands\Events\Device\CheckCashStatus.cs" />
+    <Compile Include="Commands\Events\Device\CheckChangeDueAndTenderType.cs" />
+    <Compile Include="Commands\Events\Device\CheckCMCashCount.cs" />
+    <Compile Include="Commands\Events\Device\CheckCountPercentage.cs" />
+    <Compile Include="Commands\Events\Device\CheckPrinterError.cs" />
+    <Compile Include="Commands\Events\Device\CheckReceiptItem.cs" />
+    <Compile Include="Commands\Events\Device\CheckSayAmount.cs" />
+    <Compile Include="Commands\Events\Device\CheckSayPhrase.cs" />
+    <Compile Include="Commands\Events\Device\CheckSaySecurity.cs" />
+    <Compile Include="Commands\Events\Device\CheckTabReverse.cs" />
+    <Compile Include="Commands\Events\Device\CheckTabTransport.cs" />
+    <Compile Include="Commands\Events\Device\CheckTriColorLight.cs" />
+    <Compile Include="Commands\Events\Device\ESAIntervention.cs" />
+    <Compile Include="Commands\Events\Device\InvokeCashAcceptorError.cs" />
+    <Compile Include="Commands\Events\Device\InvokeCheckPrinterError.cs" />
+    <Compile Include="Commands\Events\Device\InvokeCoinAcceptorError.cs" />
+    <Compile Include="Commands\Events\Device\InvokeScannerError.cs" />
+    <Compile Include="Commands\Events\Device\InvokeSignatureCaptureError.cs" />
+    <Compile Include="Commands\Events\Device\OnAutomatedLogin.cs" />
+    <Compile Include="Commands\Events\Device\DetectCoupon.cs" />
+    <Compile Include="Commands\Events\Device\EscrowCash.cs" />
+    <Compile Include="Commands\Events\Device\ExecutePinPad.cs" />
+    <Compile Include="Commands\Events\Device\InsertCoin.cs" />
+    <Compile Include="Commands\Events\Device\PLAMatchingItemResponse.cs" />
+    <Compile Include="Commands\Events\Device\PLAShowMessage.cs" />
+    <Compile Include="Commands\Events\Device\PLAVerifyItemIntervention.cs" />
+    <Compile Include="Commands\Events\Device\RemoveCashTrough.cs" />
+    <Compile Include="Commands\Events\Device\ResetTabSmartScale.cs" />
+    <Compile Include="Commands\Events\Device\ScanCode.cs" />
+    <Compile Include="Commands\Events\Device\SwipeMsr.cs" />
+    <Compile Include="Commands\Events\Device\WeighBagScale.cs" />
+    <Compile Include="Commands\Events\Device\WeighScale.cs" />
+    <Compile Include="Commands\Events\EmulatorEventCommand.cs" />
+    <Compile Include="Commands\Events\EventCommandFactory.cs" />
+    <Compile Include="Commands\Events\IEventCommand.cs" />
+    <Compile Include="Commands\Events\IEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Launcher\ApplicationLauncherEventCommand.cs" />
+    <Compile Include="Commands\Events\Launcher\LaunchApplication.cs" />
+    <Compile Include="Commands\Events\LaunchPadPsxEventCommand.cs" />
+    <Compile Include="Commands\Events\LaunchpadPsxEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\LaunchPadPsx\LaunchPadPsxChangeContext.cs" />
+    <Compile Include="Commands\Events\LaunchPadPsx\LaunchPadPsxChangeFocus.cs" />
+    <Compile Include="Commands\Events\LaunchPadPsx\LaunchPadPsxClick.cs" />
+    <Compile Include="Commands\Events\LaunchPadPsx\LaunchPadPsxUnsupportedEvent.cs" />
+    <Compile Include="Commands\Events\PsxEventCommand.cs" />
+    <Compile Include="Commands\Events\PsxEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Psx\PsxChangeContext.cs" />
+    <Compile Include="Commands\Events\Psx\PsxChangeTheme.cs" />
+    <Compile Include="Commands\Events\Psx\PsxClick.cs" />
+    <Compile Include="Commands\Events\Psx\PsxConnectRemote.cs" />
+    <Compile Include="Commands\Events\Psx\PsxKeyDown.cs" />
+    <Compile Include="Commands\Events\Psx\PsxKeyPress.cs" />
+    <Compile Include="Commands\Events\Psx\PsxUnsupportedEvent.cs" />
+    <Compile Include="Commands\Events\ReportEventCommand.cs" />
+    <Compile Include="Commands\Events\ReportEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Report\CheckReportsMenu.cs" />
+    <Compile Include="Commands\Events\Report\CheckRunReports.cs" />
+    <Compile Include="Commands\Events\UIAutoTestEventCommand.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\AutoTestException.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\INextGenUITestClient.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\NextGenUITestClient.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\TestEvents.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestCartIndexChanged.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestGridPageClick.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestCategoryClick.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestHWuNav.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestEndOfTransaction.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestKeyboardButtonClick.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestContextChanged.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestButtonClick.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestListButtonClick.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestSignSignature.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestSwipeLeft.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UIAutoTestSwipeRight.cs" />
+    <Compile Include="Commands\Events\UIAutoTest\UpdateContextEventArgs.cs" />
+    <Compile Include="Commands\Events\UIAutoTestEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\UIValidationEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\UIValidation\UIValidationEventCommand.cs" />
+    <Compile Include="Commands\Events\UIValidation\UIValidationPropertyChange.cs" />
+    <Compile Include="Commands\Events\UtilityEventCommand.cs" />
+    <Compile Include="Commands\Events\UtilityEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Utility\UtilitySleep.cs" />
+    <Compile Include="Commands\Events\WldbEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Wldb\UpdateWldb.cs" />
+    <Compile Include="Commands\Events\Wldb\WldbEventCommand.cs" />
+    <Compile Include="Commands\Events\XmEventCommand.cs" />
+    <Compile Include="Commands\Events\XmEventCommandFactory.cs" />
+    <Compile Include="Commands\Events\Xm\CheckXmCountChanges.cs" />
+    <Compile Include="Commands\Events\Xm\CheckXmPrintData.cs" />
+    <Compile Include="Commands\Gui\ChmHelp.cs" />
+    <Compile Include="Commands\Gui\ConvertScripts.cs" />
+    <Compile Include="Commands\Gui\DeleteScotLogs.cs" />
+    <Compile Include="Commands\Gui\EmulatorsOFF.cs" />
+    <Compile Include="Commands\Gui\EmulatorsON.cs" />
+    <Compile Include="Commands\Gui\GenerateDiagnostics.cs" />
+    <Compile Include="Commands\Gui\GenerateScripts.cs" />
+    <Compile Include="Commands\Gui\IHelp.cs" />
+    <Compile Include="Commands\Gui\IMessageView.cs" />
+    <Compile Include="Commands\Gui\KillSSCO.cs" />
+    <Compile Include="Commands\Gui\LaunchCaddConfigure.cs" />
+    <Compile Include="Commands\Gui\LaunchRap.cs" />
+    <Compile Include="Commands\Gui\LaunchSSCO.cs" />
+    <Compile Include="Commands\Gui\PlayScripts.cs" />
+    <Compile Include="Commands\Gui\RevertSettings.cs" />
+    <Compile Include="Commands\Gui\RunClient.cs" />
+    <Compile Include="Commands\Gui\RunServer.cs" />
+    <Compile Include="Commands\Gui\ShowAbout.cs" />
+    <Compile Include="Commands\Gui\ShowCardEventEditor.cs" />
+    <Compile Include="Commands\Gui\ShowFLDevice.cs" />
+    <Compile Include="Commands\Gui\ShowHelp.cs" />
+    <Compile Include="Commands\Gui\ShowScripts.cs" />
+    <Compile Include="Commands\Gui\ShowSscoVersion.cs" />
+    <Compile Include="Commands\Gui\ToggleEmulators.cs" />
+    <Compile Include="Config\AutomatedLoginConfiguration.cs" />
+    <Compile Include="Config\BackCommand.cs" />
+    <Compile Include="Config\BackCommands.cs" />
+    <Compile Include="Config\ButtonNameData.cs" />
+    <Compile Include="Config\ClientConfiguration.cs" />
+    <Compile Include="Config\ClientConfigurationEventArgs.cs" />
+    <Compile Include="Config\ConfigFile.cs" />
+    <Compile Include="Config\ConfigFileEventArgs.cs" />
+    <Compile Include="Config\ConfigFiles.cs" />
+    <Compile Include="Config\ConfigFilesEventArgs.cs" />
+    <Compile Include="Config\GeneratorConfiguration.cs" />
+    <Compile Include="Config\GeneratorConfigurationEventArgs.cs" />
+    <Compile Include="Config\GetDiagLocation.cs" />
+    <Compile Include="Config\ILaunchPadConfigRepository.cs" />
+    <Compile Include="Config\Key.cs" />
+    <Compile Include="Config\KeyPad.cs" />
+    <Compile Include="Config\LaneConfiguration.cs" />
+    <Compile Include="Config\LaneHook.cs" />
+    <Compile Include="Config\LaneHooks.cs" />
+    <Compile Include="Config\LaneParser.cs" />
+    <Compile Include="Config\LaneParserPattern.cs" />
+    <Compile Include="Config\LaneParsers.cs" />
+    <Compile Include="Config\LaunchPadConfig.cs" />
+    <Compile Include="Config\LaunchPadConfigExecutable.cs" />
+    <Compile Include="Config\MSRCard.cs" />
+    <Compile Include="Config\MSRCards.cs" />
+    <Compile Include="Config\PlayerConfiguration.cs" />
+    <Compile Include="Config\PlayerConfigurationEventArgs.cs" />
+    <Compile Include="Config\XmlLaunchPadConfigRepository.cs" />
+    <Compile Include="Controllers\ApplicationLauncherController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\IApplicationLauncherController.cs" />
+    <Compile Include="Controllers\IWldbController.cs" />
+    <Compile Include="Controllers\LaneController.cs" />
+    <Compile Include="Controllers\ServerController.cs" />
+    <Compile Include="Controllers\WldbController.cs" />
+    <Compile Include="Emulators\AlphaNumericPassword.cs" />
+    <Compile Include="Emulators\ColesClickReasonCode.cs" />
+    <Compile Include="Emulators\InvalidUserLoginException.cs" />
+    <Compile Include="Emulators\ISscatLaunchPad.cs" />
+    <Compile Include="Emulators\LaneClickCommand.cs" />
+    <Compile Include="Emulators\LaneCommand.cs" />
+    <Compile Include="Emulators\Login.cs" />
+    <Compile Include="Emulators\NoPsxAttachedException.cs" />
+    <Compile Include="Emulators\NXTUIClickCommand.cs" />
+    <Compile Include="Emulators\NXTUIInsertCoupon.cs" />
+    <Compile Include="Emulators\NXTUILogin.cs" />
+    <Compile Include="Emulators\NXTUIProduceScaleZero.cs" />
+    <Compile Include="Emulators\NXTUISignSignature.cs" />
+    <Compile Include="Emulators\PsxControlNotClickableException.cs" />
+    <Compile Include="Emulators\PsxControlNotFoundException.cs" />
+    <Compile Include="Emulators\PsxOutOfContextException.cs" />
+    <Compile Include="Emulators\ReceiptItemException.cs" />
+    <Compile Include="Emulators\SscatLane.cs" />
+    <Compile Include="Emulators\SscatLaneEventArgs.cs" />
+    <Compile Include="Emulators\SscatLaunchPad.cs" />
+    <Compile Include="Emulators\SscoNotFoundException.cs" />
+    <Compile Include="Emulators\Tear.cs" />
+    <Compile Include="Emulators\UIControlNotFoundException.cs" />
+    <Compile Include="Gui\UIValidationEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\UIValidationEventListViewItem.cs" />
+    <Compile Include="Gui\WarningEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\WarningEventListViewItem.cs" />
+    <Compile Include="Models\OldModel\FingerDeviceEvent.cs" />
+    <Compile Include="Models\OldModel\FingerPsxEvent.cs" />
+    <Compile Include="Models\OldModel\FingerScript.cs" />
+    <Compile Include="Models\OldModel\FingerScriptEvent.cs" />
+    <Compile Include="Models\OldModel\FingerUIAutoTestEvent.cs" />
+    <Compile Include="Models\OldModel\Result.cs" />
+    <Compile Include="Models\Report\ReportUIValidationEvent.cs" />
+    <Compile Include="Models\Report\ReportUIValidationEvents.cs" />
+    <Compile Include="Models\Report\ReportUtilityEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractErrorEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractUIValidationEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractUIValidationEvents.cs" />
+    <Compile Include="Models\ScriptModel\AbstractUtilityEvent.cs" />
+    <Compile Include="Models\ScriptModel\ErrorEvent.cs" />
+    <Compile Include="Models\ScriptModel\IErrorEvent.cs" />
+    <Compile Include="Models\ScriptModel\IUIValidationEvent.cs" />
+    <Compile Include="Models\ScriptModel\IUIValidationEvents.cs" />
+    <Compile Include="Models\ScriptModel\IUtilityEvent.cs" />
+    <Compile Include="Models\ScriptModel\SSCATScripts.cs" />
+    <Compile Include="Models\ScriptModel\ApplicationLauncherEvent.cs" />
+    <Compile Include="Models\ScriptModel\DeviceEvent.cs" />
+    <Compile Include="Models\ScriptModel\DeviceEventError.cs" />
+    <Compile Include="Models\ScriptModel\LaunchpadPsxEvent.cs" />
+    <Compile Include="Models\ScriptModel\PsxEvent.cs" />
+    <Compile Include="Models\ScriptModel\ReportEvent.cs" />
+    <Compile Include="Models\ScriptModel\SSCATScript.cs" />
+    <Compile Include="Models\ScriptModel\SSCATScriptEvent.cs" />
+    <Compile Include="Models\ScriptModel\UIAutoTestEvent.cs" />
+    <Compile Include="Models\ScriptModel\UIValidationEvent.cs" />
+    <Compile Include="Models\ScriptModel\UIValidationEvents.cs" />
+    <Compile Include="Models\ScriptModel\UtilityEvent.cs" />
+    <Compile Include="Models\ScriptModel\WarningEvent.cs" />
+    <Compile Include="Models\ScriptModel\WldbEvent.cs" />
+    <Compile Include="Models\ScriptModel\XmEvent.cs" />
+    <Compile Include="Gui\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\AboutForm.Designer.cs" />
+    <Compile Include="Gui\CardEventEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CardEventEditor.Designer.cs" />
+    <Compile Include="Gui\CardEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\CardEventListViewItem.cs" />
+    <Compile Include="Gui\CardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\CardForm.Designer.cs" />
+    <Compile Include="Gui\ConfigFileListViewItem.cs" />
+    <Compile Include="Gui\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\LoadingForm.Designer.cs" />
+    <Compile Include="Gui\LoadingFormThread.cs" />
+    <Compile Include="Gui\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MessageForm.Designer.cs" />
+    <Compile Include="Gui\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionsForm.Designer.cs" />
+    <Compile Include="Gui\PlaylistTreeNode.cs" />
+    <Compile Include="Gui\ScriptCardEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ScriptCardEventListViewItem.cs" />
+    <Compile Include="Gui\ScriptEventListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ScriptEventListViewItem.cs" />
+    <Compile Include="Gui\ScriptEventTreeNode.cs" />
+    <Compile Include="Gui\ScriptResultListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\ScriptResultListViewItem.cs" />
+    <Compile Include="Gui\ScriptTreeNode.cs" />
+    <Compile Include="Log\IScotLogHook.cs" />
+    <Compile Include="Log\ScotLogHook.cs" />
+    <Compile Include="Log\ScotLogHookEventArgs.cs" />
+    <Compile Include="Models\ScriptModel\AbstractDeviceEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractPsxEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractReportEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractScript.cs" />
+    <Compile Include="Models\ScriptModel\AbstractScriptEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractScriptEventItem.cs" />
+    <Compile Include="Models\ScriptModel\AbstractUIAutoTestEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractWarningEvent.cs" />
+    <Compile Include="Models\ScriptModel\AbstractXmEvent.cs" />
+    <Compile Include="Models\ApplicationLauncherEventArgs.cs" />
+    <Compile Include="Models\CpuAndMemory.cs" />
+    <Compile Include="Models\CpuAndMemoryLogger.cs" />
+    <Compile Include="Models\ScriptModel\IApplicationLauncherEvent.cs" />
+    <Compile Include="Models\ScriptModel\IDeviceEvent.cs" />
+    <Compile Include="Models\ScriptModel\ILaunchPadPsxEvent.cs" />
+    <Compile Include="Models\IPlaylist.cs" />
+    <Compile Include="Models\IPlaylistScript.cs" />
+    <Compile Include="Models\ScriptModel\IPsxEvent.cs" />
+    <Compile Include="Models\IReport.cs" />
+    <Compile Include="Models\ScriptModel\IReportEvent.cs" />
+    <Compile Include="Models\IReportScript.cs" />
+    <Compile Include="Models\ScriptModel\IScript.cs" />
+    <Compile Include="Models\ScriptModel\IScriptEvent.cs" />
+    <Compile Include="Models\IScriptEventItem.cs" />
+    <Compile Include="Models\ISequential.cs" />
+    <Compile Include="Models\IStimulus.cs" />
+    <Compile Include="Models\ScriptModel\IUIAutoTestEvent.cs" />
+    <Compile Include="Models\ScriptModel\IWarningEvent.cs" />
+    <Compile Include="Models\ScriptModel\IWldbEvent.cs" />
+    <Compile Include="Models\IXmEvent.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\MemoryUsage.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\PlaylistEventArgs.cs" />
+    <Compile Include="Models\PlaylistScript.cs" />
+    <Compile Include="Models\PlaylistScriptEventArgs.cs" />
+    <Compile Include="Models\PsxDisplay\PsxButton.cs" />
+    <Compile Include="Models\PsxDisplay\PsxContext.cs" />
+    <Compile Include="Models\PsxDisplay\PsxContexts.cs" />
+    <Compile Include="Models\PsxDisplay\PsxControl.cs" />
+    <Compile Include="Models\PsxDisplay\PsxControls.cs" />
+    <Compile Include="Models\PsxDisplay\PsxDisplay.cs" />
+    <Compile Include="Models\PsxDisplay\PsxList.cs" />
+    <Compile Include="Models\PsxDisplay\PsxProperties.cs" />
+    <Compile Include="Models\PsxDisplay\PsxProperty.cs" />
+    <Compile Include="Models\Report\Report.cs" />
+    <Compile Include="Models\Report\ReportApplicationLauncherEvent.cs" />
+    <Compile Include="Models\Report\ReportDeviceEvent.cs" />
+    <Compile Include="Models\ReportEventArgs.cs" />
+    <Compile Include="Models\Report\ReportLaunchPadPsxEvent.cs" />
+    <Compile Include="Models\ReportPlayback.cs" />
+    <Compile Include="Models\ReportPlaybackUtility.cs" />
+    <Compile Include="Models\Report\ReportPsxEvent.cs" />
+    <Compile Include="Models\Report\ReportReportEvent.cs" />
+    <Compile Include="Models\Report\ReportScript.cs" />
+    <Compile Include="Models\Report\ReportScriptEvent.cs" />
+    <Compile Include="Models\Report\ReportUIAutoTestEvent.cs" />
+    <Compile Include="Models\Report\ReportWarningEvent.cs" />
+    <Compile Include="Models\Report\ReportWldbEvent.cs" />
+    <Compile Include="Models\Report\ReportXmEvent.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\ResultEventArgs.cs" />
+    <Compile Include="Models\SaveReport.cs" />
+    <Compile Include="Models\SaveReportEventArgs.cs" />
+    <Compile Include="Models\ScriptConfig.cs" />
+    <Compile Include="Models\ScriptConfigs.cs" />
+    <Compile Include="Models\ScriptEvent.cs" />
+    <Compile Include="Models\ScriptEventArgs.cs" />
+    <Compile Include="Models\ScriptEventEventArgs.cs" />
+    <Compile Include="Models\ScriptEventFormatter.cs" />
+    <Compile Include="Models\ScriptEvents.cs" />
+    <Compile Include="Models\ScriptFile.cs" />
+    <Compile Include="Models\TriColorLightFactory.cs" />
+    <Compile Include="Models\WarningEventArgs.cs" />
+    <Compile Include="Models\WldbEventArgs.cs" />
+    <Compile Include="Net\Dispatchers\Request\CheckConfigRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\GenerateScriptsRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\GetConfigRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\LoadConfigRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\PlayScriptRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\StopPlayerRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Request\UpdateWldbRequestDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ConfigCheckedResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ConfigLoadedResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ConfigResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ErrorResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\MessageResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ReportResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\PlayerStoppedResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ScriptEventResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ScriptResultResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ScriptsResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\ScriptWarningEventResponseDispatcher.cs" />
+    <Compile Include="Net\Dispatchers\Response\StopResponseDispatcher.cs" />
+    <Compile Include="Net\ISscatRequestDispatcher.cs" />
+    <Compile Include="Net\ISscatResponseDispatcher.cs" />
+    <Compile Include="Net\SscatClient.cs" />
+    <Compile Include="Net\SscatClientWorker.cs" />
+    <Compile Include="Net\SscatRequest.cs" />
+    <Compile Include="Net\SscatRequestDispatcher.cs" />
+    <Compile Include="Net\SscatResponse.cs" />
+    <Compile Include="Net\SscatResponseDispatcher.cs" />
+    <Compile Include="Net\SscatServer.cs" />
+    <Compile Include="Net\SscatServerWorker.cs" />
+    <Compile Include="Parsers\AbstractEventAdder.cs" />
+    <Compile Include="Parsers\AbstractParser.cs" />
+    <Compile Include="Parsers\Condition.cs" />
+    <Compile Include="Parsers\DeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\AmountAndTaxDueDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\BagScaleEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CashErrorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CashEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CashOrCoinDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CashOrCoinErrorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CashTroughEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ChangeDueAndTenderTypeEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CMCountPercentageAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CoinErrorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CoinEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\CouponSlipDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ESAEmulatorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\HandleScannerDataEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\MsrDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\OnAutomatedLoginEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PLAShowMessageEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PLAVerifyItemInterventionEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PLAMatchingItemResponseEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PinPadCancelDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PinPadDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\PrinterEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ReceiptItemDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\SayAmountEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\SayPhraseEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\SaySecurityEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ScaleEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\Scanner3207DeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ScannerDeviceErrorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ScannerDeviceEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\ScannerDevicePart2EventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\SignatureCaptureErrorEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\SignatureCaptureEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\TABReverseEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\TABSmartScaleEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\TABTransportEventAdder.cs" />
+    <Compile Include="Parsers\DeviceEvents\TriColorLightEventAdder.cs" />
+    <Compile Include="Parsers\ErrorEventAdder.cs" />
+    <Compile Include="Parsers\ErrorEvents\ErrorPosOutOfSynchEventAdder.cs" />
+    <Compile Include="Parsers\EventParser.cs" />
+    <Compile Include="Parsers\ICondition.cs" />
+    <Compile Include="Parsers\IDynamicFileName.cs" />
+    <Compile Include="Parsers\IEventAdder.cs" />
+    <Compile Include="Parsers\IParser.cs" />
+    <Compile Include="Parsers\IParserPattern.cs" />
+    <Compile Include="Parsers\IPath.cs" />
+    <Compile Include="Parsers\IsClassicSCO.cs" />
+    <Compile Include="Parsers\IsLogExists.cs" />
+    <Compile Include="Parsers\MemoryUsageParser.cs" />
+    <Compile Include="Parsers\ParserPattern.cs" />
+    <Compile Include="Parsers\ProgressEventArgs.cs" />
+    <Compile Include="Parsers\PsxDynamicFileName.cs" />
+    <Compile Include="Parsers\PsxEventAdder.cs" />
+    <Compile Include="Parsers\PSXEvents\LaunchPadPsxEventAdder.cs" />
+    <Compile Include="Parsers\ReportEventAdder.cs" />
+    <Compile Include="Parsers\ReportEvents\ReportsMenuEventAdder.cs" />
+    <Compile Include="Parsers\ReportEvents\RunReportsEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestAutomatedLoginEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestButtonClickEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestCartIndexChangedEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestCategoryClickEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestContextChangedEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestEndOfTransactionEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestGridPageClickEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestHWuNavEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestKeyboardButtonClickEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestListButtonClickEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestSignatureEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestSwipeLeftEventAdder.cs" />
+    <Compile Include="Parsers\UIAutoTestEvents\UIAutoTestSwipeRightEventAdder.cs" />
+    <Compile Include="Parsers\UIValidationEventAdder.cs" />
+    <Compile Include="Parsers\UIValidationEvents\UIValidationPropertyChangeEventAdder.cs" />
+    <Compile Include="Parsers\WarningEventAdder.cs" />
+    <Compile Include="Parsers\WarningEvents\WarningUIClippedTextEventAdder.cs" />
+    <Compile Include="Parsers\XmEventAdder.cs" />
+    <Compile Include="Parsers\XMEvents\XmAlertMessageEventAdder.cs" />
+    <Compile Include="Parsers\XMEvents\XmCountChangesEventAdder.cs" />
+    <Compile Include="Parsers\XMEvents\XmPrintDataEventAdder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\BaseXmlRepository.cs" />
+    <Compile Include="Repositories\IClientConfigurationRepository.cs" />
+    <Compile Include="Repositories\IConfigFileRepository.cs" />
+    <Compile Include="Repositories\IConfigFilesRepository.cs" />
+    <Compile Include="Repositories\ILaneConfigurationRepository.cs" />
+    <Compile Include="Repositories\IO\IOConfigFileRepository.cs" />
+    <Compile Include="Repositories\IO\IOConfigFilesRepository.cs" />
+    <Compile Include="Repositories\IPlayerConfigurationRepository.cs" />
+    <Compile Include="Repositories\IPluginRepository.cs" />
+    <Compile Include="Repositories\IPsxDisplayRepository.cs" />
+    <Compile Include="Repositories\IReportRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IGeneratorConfigurationRepository.cs" />
+    <Compile Include="Repositories\IScriptRepository.cs" />
+    <Compile Include="Repositories\IXmlRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlClientConfigurationRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlSSCATScriptRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlLaneConfigurationRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlPlayerConfigurationRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlPluginRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlPsxDisplayRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlReportRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlGeneratorConfigurationRepository.cs" />
+    <Compile Include="Repositories\Xml\XmlScriptRepository.cs" />
+    <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\LaneService.cs" />
+    <Compile Include="SscatContext.cs" />
+    <Compile Include="SscatEventArgs.cs" />
+    <Compile Include="Util\Argument.cs" />
+    <Compile Include="Util\ArgumentParser.cs" />
+    <Compile Include="Util\ArrayHelper.cs" />
+    <Compile Include="Util\Comparers\FileComparer.cs" />
+    <Compile Include="Util\Comparers\FileNameComparer.cs" />
+    <Compile Include="Util\Comparers\NumericComparer.cs" />
+    <Compile Include="Util\Comparers\ScriptComparer.cs" />
+    <Compile Include="Util\Comparers\ScriptEventComparer.cs" />
+    <Compile Include="Util\Comparers\StringLogicalComparer.cs" />
+    <Compile Include="Util\Constants.cs" />
+    <Compile Include="Util\DiagnosticsUtility.cs" />
+    <Compile Include="Util\DirectoryEventArgs.cs" />
+    <Compile Include="Util\EncodingUtility.cs" />
+    <Compile Include="Util\ISscatApplicationLauncher.cs" />
+    <Compile Include="Util\ISscatSecurityManager.cs" />
+    <Compile Include="Util\IWindowAppManager.cs" />
+    <Compile Include="Util\RegexUtility.cs" />
+    <Compile Include="Util\ResourceUtility.cs" />
+    <Compile Include="Util\SscatApplicationLauncher.cs" />
+    <Compile Include="Util\SscatSecurityManager.cs" />
+    <Compile Include="Util\StringArray.cs" />
+    <Compile Include="Util\WindowAppHelper.cs" />
+    <Compile Include="Util\WindowAppManager.cs" />
+    <Compile Include="Views\IAboutView.cs" />
+    <Compile Include="Views\IApplicationLauncherView.cs" />
+    <Compile Include="Views\ICleanFilesView.cs" />
+    <Compile Include="Views\IClientConfigurationView.cs" />
+    <Compile Include="Views\IClientListView.cs" />
+    <Compile Include="Views\IClientView.cs" />
+    <Compile Include="Views\IConnectToServerView.cs" />
+    <Compile Include="Views\ICustomGeneratorView.cs" />
+    <Compile Include="Views\IOutputView.cs" />
+    <Compile Include="Views\IPad.cs" />
+    <Compile Include="Views\IPlayerView.cs" />
+    <Compile Include="Views\IPlaylistListView.cs" />
+    <Compile Include="Views\IPlaylistView.cs" />
+    <Compile Include="Views\IReportView.cs" />
+    <Compile Include="Views\IScriptGeneratorView.cs" />
+    <Compile Include="Views\IScriptListView.cs" />
+    <Compile Include="Views\IScriptView.cs" />
+    <Compile Include="Views\IServerView.cs" />
+    <Compile Include="Views\IWldbManagerView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\AboutForm.resx" />
+    <EmbeddedResource Include="Gui\CardEventEditor.resx" />
+    <EmbeddedResource Include="Gui\CardForm.resx" />
+    <EmbeddedResource Include="Gui\LoadingForm.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MessageForm.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasySocket\EasySocket.2015.csproj">
+      <Project>{3dede62d-d687-4567-bbe1-0e7f204340ca}</Project>
+      <Name>EasySocket.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2015.csproj">
+      <Project>{9894142b-9559-479a-8811-89ee3cde16fe}</Project>
+      <Name>Ncr.Core.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PsxNet\PsxNet.2015.csproj">
+      <Project>{5476850f-c521-41aa-83f5-7040d7e9a077}</Project>
+      <Name>PsxNet.2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

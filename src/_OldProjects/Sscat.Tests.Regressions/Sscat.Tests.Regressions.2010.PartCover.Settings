@@ -1,0 +1,4 @@
+﻿<PartCoverSettings>
+  <Rule>+[Ncr*]*</Rule>
+  <Rule>+[Sscat*]*</Rule>
+</PartCoverSettings>

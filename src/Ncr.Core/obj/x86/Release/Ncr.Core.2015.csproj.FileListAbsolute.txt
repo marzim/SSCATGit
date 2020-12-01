@@ -1,0 +1,8 @@
+D:\mc185104\projects\sscat\trunk\dist40\Ncr.Core.dll
+D:\mc185104\projects\sscat\trunk\dist40\Ncr.Core.pdb
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.2015.csprojResolveAssemblyReference.cache
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.Gui.BaseForm.resources
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.Gui.BaseUserControl.resources
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.2015.csproj.GenerateResource.Cache
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.dll
+D:\mc185104\projects\sscat\trunk\src\Ncr.Core\obj\x86\Release\Ncr.Core.pdb

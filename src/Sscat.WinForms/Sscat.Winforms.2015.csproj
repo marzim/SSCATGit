@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE809A55-8771-4EEC-B72B-61513BE58347}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sscat.Winforms</RootNamespace>
+    <AssemblyName>Sscat.Winforms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\sscat\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
+    <DefineConstants>NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SscatWinforms.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\dist40\</OutputPath>
+    <DefineConstants>NET40</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\thirdparty\external\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\ConnectToServer.cs" />
+    <Compile Include="Commands\CustomScriptGenerator.cs" />
+    <Compile Include="Commands\ManageApplicationLauncher.cs" />
+    <Compile Include="Commands\UpdateWldbCommand.cs" />
+    <Compile Include="Commands\UpdateWldbScriptCommand.cs" />
+    <Compile Include="Gui\ApplicationLauncherPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ApplicationLauncherPane.Designer.cs">
+      <DependentUpon>ApplicationLauncherPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ClientConfigurationPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ClientConfigurationPane.Designer.cs">
+      <DependentUpon>ClientConfigurationPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ClientPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ClientPane.Designer.cs">
+      <DependentUpon>ClientPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ConfigFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ConfigFileForm.Designer.cs">
+      <DependentUpon>ConfigFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ConnectToServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ConnectToServerForm.Designer.cs">
+      <DependentUpon>ConnectToServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\CustomGeneratorPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\CustomGeneratorPane.Designer.cs">
+      <DependentUpon>CustomGeneratorPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DiagsStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GeneratorPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GeneratorPane.Designer.cs">
+      <DependentUpon>GeneratorPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MSCardSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MSCardSelectionForm.Designer.cs">
+      <DependentUpon>MSCardSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MSRCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MSRCardForm.Designer.cs">
+      <DependentUpon>MSRCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\OutputPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OutputPane.Designer.cs">
+      <DependentUpon>OutputPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PlayerPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\PlayerPane.Designer.cs">
+      <DependentUpon>PlayerPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ReportPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ReportPane.Designer.cs">
+      <DependentUpon>ReportPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\SaveReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SaveReportForm.Designer.cs">
+      <DependentUpon>SaveReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ScriptPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\ScriptPane.Designer.cs">
+      <DependentUpon>ScriptPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\UpdateWldbPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\UpdateWldbPane.Designer.cs">
+      <DependentUpon>UpdateWldbPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\UpdateWLDBScriptPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\UpdateWLDBScriptPane.Designer.cs">
+      <DependentUpon>UpdateWLDBScriptPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\WebBrowserPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\WebBrowserPane.Designer.cs">
+      <DependentUpon>WebBrowserPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\WldbManagerPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\WldbManagerPane.Designer.cs">
+      <DependentUpon>WldbManagerPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SscatMain.cs" />
+    <EmbeddedResource Include="Gui\ApplicationLauncherPane.resx">
+      <DependentUpon>ApplicationLauncherPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ClientConfigurationPane.resx">
+      <DependentUpon>ClientConfigurationPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ClientPane.resx">
+      <DependentUpon>ClientPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ConfigFileForm.resx">
+      <DependentUpon>ConfigFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ConnectToServerForm.resx">
+      <DependentUpon>ConnectToServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\CustomGeneratorPane.resx">
+      <DependentUpon>CustomGeneratorPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DiagsStatusForm.resx">
+      <DependentUpon>DiagsStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GeneratorPane.resx">
+      <DependentUpon>GeneratorPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MSCardSelectionForm.resx">
+      <DependentUpon>MSCardSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MSRCardForm.resx">
+      <DependentUpon>MSRCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\OutputPane.resx">
+      <DependentUpon>OutputPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PlayerPane.resx">
+      <DependentUpon>PlayerPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SaveReportForm.resx">
+      <DependentUpon>SaveReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ScriptPane.resx">
+      <DependentUpon>ScriptPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\UpdateWldbPane.resx">
+      <DependentUpon>UpdateWldbPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\WebBrowserPane.resx">
+      <DependentUpon>WebBrowserPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\WldbManagerPane.resx">
+      <DependentUpon>WldbManagerPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SscatWinforms.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ncr.Core\Ncr.Core.2015.csproj">
+      <Project>{9894142b-9559-479a-8811-89ee3cde16fe}</Project>
+      <Name>Ncr.Core.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PsxNet\PsxNet.2015.csproj">
+      <Project>{5476850f-c521-41aa-83f5-7040d7e9a077}</Project>
+      <Name>PsxNet.2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sscat.Core\Sscat.Core.2015.csproj">
+      <Project>{87288ecf-d0a9-4290-b053-3249d1713fd8}</Project>
+      <Name>Sscat.Core.2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

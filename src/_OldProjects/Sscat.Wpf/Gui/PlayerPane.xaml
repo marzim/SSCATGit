@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myTypes:BaseUserControl
+	x:Class="Sscat.Wpf.Gui.PlayerPane" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:myTypes="clr-namespace:Sscat.Wpf.Gui">
+	<StackPanel>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<StackPanel
+				Margin="3"
+				Grid.Row="0"
+				Grid.Column="0">
+				<Button
+					Padding="10">Open Scripts</Button>
+				<Button
+					Padding="10">Remove Script(s)</Button>
+				<Button
+					Padding="10">Clear Scripts</Button>
+			</StackPanel>
+			<ListView
+				Margin="0,3,0,3"
+				Grid.Row="0"
+				Grid.Column="1"></ListView>
+			<StackPanel
+				Margin="3"
+				Grid.Row="0"
+				Grid.Column="2">
+				<Button
+					Padding="10">
+					<StackPanel>
+						<Image Source="play.png" Stretch="Uniform"></Image>
+						<TextBlock
+							Text="Play"></TextBlock>
+					</StackPanel>
+				</Button>
+				<Button
+					Padding="10">Stop</Button>
+			</StackPanel>
+		</Grid>
+		<ListView
+			Margin="3"></ListView>
+	</StackPanel>
+</myTypes:BaseUserControl>
